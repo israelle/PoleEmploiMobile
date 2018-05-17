@@ -51,6 +51,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 intent.putExtra("Number",computers.get(position).getNum());
                 intent.putExtra("Description",computers.get(position).getDescription());
                 intent.putExtra("Thumbnail",computers.get(position).getThumbnails());
+                intent.putExtra("Etat",computers.get(position).getEtat());
                 // start the activity
                 mContext.startActivity(intent);
 
@@ -74,7 +75,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             computer_title = (TextView) itemView.findViewById(R.id.computer_title_id) ;
             img_computer_thumbnail = (ImageView) itemView.findViewById(R.id.computer_img_id);
-            img_available = (ImageView) itemView.findViewById(R.id.img_available);
+            img_available = (ImageView) itemView.findViewById(R.id.imageAvailable);
             cardView = (CardView) itemView.findViewById(R.id.cardview_id);
 
 

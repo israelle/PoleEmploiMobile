@@ -25,12 +25,6 @@ public class BorneView extends AppCompatActivity {
 
     final String EXTRA_LOGIN = "user_login";
     List<Computer> computers;
-    public enum ETAT {DISPONIBLE, OCCUPE, BESOIN_D_AIDE};
-    final int NB_MAX_COMPUTERS = 10;
-    private String hostname = "172.20.10.13";
-    private String url = "http://localhost:8080/";
-    private int port = 8181;
-    final String debugString = "debug";
 
 
     @Override
@@ -39,14 +33,16 @@ public class BorneView extends AppCompatActivity {
         setContentView(R.layout.activity_borne_view);
 
         computers = new ArrayList<>();
-        int i;
 
-      for (i = 0; i < NB_MAX_COMPUTERS; i++) {
-          computers.add(new Computer("Problème de connexion", i, R.drawable.ic_computer3));
 
-      }
+        computers.add(new Computer("Champ nom saisies", 1, R.drawable.ic_computer3));
+        computers.add(new Computer("",2, "Disponible",R.drawable.ic_computer3));
+        computers.add(new Computer("Espace en trop",3, "Occupé",R.drawable.ic_computer3));
+        computers.add(new Computer("",4, "Besoin d'aide",R.drawable.ic_computer3));
+        computers.add(new Computer("",5, "Disponible",R.drawable.ic_computer3));
+        computers.add(new Computer("",6, "Besoin d'aide",R.drawable.ic_computer3));
 
-        computers.add(new Computer("Champ nom saisies", (i), R.drawable.ic_computer3));
+
 
         RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerview_id);
         RecyclerViewAdapter myAdapter = new RecyclerViewAdapter(this,computers);

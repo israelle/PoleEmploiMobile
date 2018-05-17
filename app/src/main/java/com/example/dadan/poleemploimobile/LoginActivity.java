@@ -54,9 +54,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     final String EXTRA_LOGIN = "user_login";
     final String EXTRA_PASSWORD = "user_password";
-    private String hostname = "localhost";// "172.20.10.13";
+    private String hostname =  "172.20.10.13";
     private String url = "http://localhost:8080/";
-    private int port = 8000;
+    private int port = 8181;
     final String debugString = "debug";
     Client client;
 

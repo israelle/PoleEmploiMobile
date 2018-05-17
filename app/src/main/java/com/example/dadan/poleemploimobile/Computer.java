@@ -9,7 +9,7 @@ public class Computer {
     private String description;
     private int num; // computer id
     private int thumbnails;
-    private BorneView.ETAT etat;
+    private String etat;
 
     public Computer() {
     }
@@ -18,13 +18,14 @@ public class Computer {
         this.description = description;
         this.num = num;
         this.thumbnails = thumbnails;
-        this.etat = etat;
     }
-    public Computer(String description, int num, BorneView.ETAT etat, int thumbnails) {
+
+    public Computer(String description, int num, String etat, int thumbnails) {
         this.description = description;
         this.num = num;
         this.thumbnails = thumbnails;
         this.etat = etat;
+
     }
 
     //getters and setters
@@ -40,11 +41,11 @@ public class Computer {
         return thumbnails;
     }
 
-    public BorneView.ETAT getEtat() {
+    public String getEtat() {
         return etat;
     }
 
-    public void setEtat(BorneView.ETAT etat) {
+    public void setEtat(String etat) {
         this.etat = etat;
     }
 
